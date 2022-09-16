@@ -23,8 +23,8 @@ const FilterStories = ({
         value={storyOption}
         onChange={handleSelectedOption}
       >
-        <option value={newStoriesUrl}>New Stories</option>
-        <option value={topStoriesUrl}>Top Stories</option>
+        <option value="New Stories">New Stories</option>
+        <option value="Top Stories">Top Stories</option>
       </select>
     </div>
   );

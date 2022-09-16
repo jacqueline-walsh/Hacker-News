@@ -3,7 +3,7 @@ import { STORY_INCREMENT, MAX_STORIES } from "../constants";
 import { debounce } from "../utilities/debounce";
 
 // this is a custom hook
-export const usePaginationScoll = () => {
+export const usePaginationScroll = () => {
   // set initial state and provide setters
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(STORY_INCREMENT);
