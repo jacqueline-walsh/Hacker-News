@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getStoryIds, newStoriesUrl, topStoriesUrl } from "../services/api";
-import { usePaginationScoll } from "../hooks/useScrollPagination";
+import { usePaginationScroll } from "../hooks/useScrollPagination";
 import FilterStories from "./FilterStories";
 import Story from "./Story";
 import "../styles/storyContainer.css";
 
 const StoriesContainer = () => {
   // destructuring from usePaginationScroll custom hook
-  const { count } = usePaginationScoll();
+  const { count } = usePaginationScroll();
 
   // state to hold and set data
   const [storyIds, setStoryIds] = useState([]);

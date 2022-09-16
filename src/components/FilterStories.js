@@ -11,6 +11,7 @@ const FilterStories = ({
   // set the story option when option has been selected
   const handleSelectedOption = (e) => {
     setStoryOption(e.target.value);
+    console.log(storyOption);
   };
 
   return (
