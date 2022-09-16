@@ -1,0 +1,12 @@
+.filter-stories-container > select {
+    width: 10rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.filter-stories-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}

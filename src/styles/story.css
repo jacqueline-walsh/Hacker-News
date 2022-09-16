@@ -1,0 +1,43 @@
+.story-title {
+    color: rgb(22, 59, 98);
+    text-transform: capitalize;
+    justify-content: center;
+}
+
+.story-title:hover {
+    color: rgb(3 83 171);
+    cursor: pointer;
+}
+
+.story-link {
+    text-decoration: none;
+}
+
+.story-meta {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+}
+
+.posted-meta {
+    flex: flex-end;
+}
+
+.story-time, .story-author {
+    font-style: italic;
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .story-meta {
+        flex-direction: column;
+        display: flex;
+    }
+    .story-author {
+        padding-bottom: .5rem;
+    }
+}
