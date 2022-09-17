@@ -11,7 +11,6 @@ const FilterStories = ({
   // set the story option when option has been selected
   const handleSelectedOption = (e) => {
     setStoryOption(e.target.value);
-    console.log(storyOption);
   };
 
   return (
@@ -24,8 +23,12 @@ const FilterStories = ({
         value={storyOption}
         onChange={handleSelectedOption}
       >
-        <option value={newStoriesUrl}>New Stories</option>
-        <option value={topStoriesUrl}>Top Stories</option>
+        <option data-qa-id="new-stories" value={newStoriesUrl}>
+          New Stories
+        </option>
+        <option data-qa-id="top-stories" value={topStoriesUrl}>
+          Top Stories
+        </option>
       </select>
     </div>
   );

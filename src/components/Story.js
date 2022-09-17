@@ -16,7 +16,9 @@ const Story = ({ storyId }) => {
   return story && story.url ? (
     <div className="story-container">
       <a className="story-link" href={story.url}>
-        <h2 className="story-title">{story.title}</h2>
+        <h2 data-qa-id="story-title" className="story-title">
+          {story.title}
+        </h2>
       </a>
       <hr />
       <div className="story-meta">
