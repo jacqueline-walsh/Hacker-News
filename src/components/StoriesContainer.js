@@ -18,8 +18,7 @@ const StoriesContainer = () => {
     // the type of news stories ids to return.  This is triggered on 1st render
     // and on change of the storyOption state.
     getStoryIds(storyOption).then((data) => setStoryIds(data));
-    console.log("count ", count);
-  }, [storyOption, count]);
+  }, [storyOption]);
 
   return (
     <div className="container">

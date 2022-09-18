@@ -38,7 +38,7 @@ export const usePaginationScroll = () => {
     window.addEventListener("scroll", handleScroll);
     // clean up function to remove the event listener
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   return { count };
 };
