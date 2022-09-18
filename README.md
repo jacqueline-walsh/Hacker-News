@@ -1,6 +1,6 @@
 # Hacker News - Latest news feed for hackers
 
-<img class="text-center" src="https://jacqueline-uploads.s3.eu-west-amazonaws.com/hacker-news.jpg"/>
+<img class="text-center" src="https://jacqueline-uploads.s3.eu-west-1.amazonaws.com/hacker-news.jpg"/>
 
 # UX
 
