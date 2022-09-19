@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { getStoryIds, newStoriesUrl, topStoriesUrl } from "../services/api";
-import { usePaginationScroll } from "../hooks/useScrollPagination";
 import FilterStories from "./FilterStories";
+import Pagination from "./Pagination";
 import Story from "./Story";
 import "../styles/storyContainer.css";
 
 const StoriesContainer = () => {
-  // destructuring from usePaginationScroll custom hook
-  const { count } = usePaginationScroll();
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(30);
 
   // state to hold and set data
   const [storyIds, setStoryIds] = useState([]);
@@ -19,6 +20,10 @@ const StoriesContainer = () => {
     // and on change of the storyOption state.
     getStoryIds(storyOption).then((data) => setStoryIds(data));
   }, [storyOption]);
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentStoryIds = storyIds.slice(firstPostIndex, lastPostIndex);
 
   return (
     <div className="container">
@@ -32,8 +37,13 @@ const StoriesContainer = () => {
         storyOption={storyOption}
         setStoryOption={setStoryOption}
       />
-
-      {storyIds.slice(0, count).map((storyId) => (
+      <Pagination
+        totalPosts={storyIds.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
+      {currentStoryIds.map((storyId) => (
         <Story key={storyId} storyId={storyId} />
       ))}
     </div>

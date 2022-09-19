@@ -1,3 +1,16 @@
+# Hacker News - Latest news feed for hackers
+
+<img class="text-center" src="https://jacqueline-uploads.s3.eu-west-1.amazonaws.com/hacker-news.jpg"/>
+
+## UX
+
+This site has being created with minimal ux design. Basic css no frills styling libraries have been used. Flex box has provided the responsive effect with a simple media query for smaller devices.
+
+### Links to resources
+
+- [Original Live Site](https://news.ycombinator.com/)
+- [API](https://github.com/HackerNews/API)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
