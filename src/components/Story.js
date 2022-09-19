@@ -4,6 +4,7 @@ import { mapTime } from "../utilities/mapTime";
 import "../styles/story.css";
 
 const Story = ({ storyId }) => {
+  // setter and getter for the individual story
   const [story, setStory] = useState({});
 
   useEffect(() => {

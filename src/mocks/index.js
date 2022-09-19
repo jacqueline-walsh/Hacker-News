@@ -7,11 +7,3 @@ export const individualStory = {
 };
 
 export const storyIds = [1];
-
-export const emptyStory = {
-  by: undefined,
-  id: undefined,
-  time: undefined,
-  title: undefined,
-  url: undefined,
-};
