@@ -8,7 +8,7 @@ const Pagination = ({
 }) => {
   let pages = [];
 
-  // iterates and stores a pages number for how many pages are needed
+  // iterates and stores a pages number for how many pages are required
   for (let i = 1; i <= Math.ceil(totalStories / storiesPerPage); i++) {
     pages.push(i);
   }
