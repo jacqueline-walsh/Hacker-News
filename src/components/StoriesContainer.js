@@ -8,7 +8,7 @@ import "../styles/storyContainer.css";
 const StoriesContainer = () => {
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(30);
+  const [storiesPerPage] = useState(30);
 
   // state to hold and set data
   const [storyIds, setStoryIds] = useState([]);
@@ -21,9 +21,9 @@ const StoriesContainer = () => {
     getStoryIds(storyOption).then((data) => setStoryIds(data));
   }, [storyOption]);
 
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentStoryIds = storyIds.slice(firstPostIndex, lastPostIndex);
+  const lastStoryIndex = currentPage * storiesPerPage;
+  const firstStoryIndex = lastStoryIndex - storiesPerPage;
+  const currentStoryIds = storyIds.slice(firstStoryIndex, lastStoryIndex);
 
   return (
     <div className="container">
@@ -38,8 +38,8 @@ const StoriesContainer = () => {
         setStoryOption={setStoryOption}
       />
       <Pagination
-        totalPosts={storyIds.length}
-        postsPerPage={postsPerPage}
+        totalStories={storyIds.length}
+        storiesPerPage={storiesPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />

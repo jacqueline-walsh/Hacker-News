@@ -15,7 +15,12 @@ const Story = ({ storyId }) => {
   // if there is a story and a story url this will render the story
   return story && story.url ? (
     <div className="story-container">
-      <a className="story-link" target="_blank" href={story.url}>
+      <a
+        className="story-link"
+        rel="noreferrer"
+        target="_blank"
+        href={story.url}
+      >
         <h2 data-qa-id="story-title" className="story-title">
           {story.title}
         </h2>
