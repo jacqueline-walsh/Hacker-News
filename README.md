@@ -8,6 +8,8 @@ This site has being created with minimal ux design. Basic css no frills styling 
 
 ## API
 
+Axios 3rd party library has been installed for fetching the api.
+
 The hacker news returns a list of story ids for both 'new stories' and the 'top stories'.
 
 - New Stories "https://hacker-news.firebaseio.com/v0/newstories.json"
@@ -21,7 +23,7 @@ To return the data for the stories the above id's need to be passed to the fetch
 
 ### App Component
 
-This component is the top level component that implements the StoryComponent.
+This component is the top level component that returns the StoryComponent.
 
 ### StoryContainer Component
 
@@ -39,7 +41,7 @@ The Pagination component provides the user with a simple navigation to stories p
 
 The Story component will return a single story with a link title taking the user to the news article. It also shows who the story is by and the length of time that the story has been posted.
 
-### Unit Testing
+## Unit Testing
 
 Unit Testing has been carried out with Jest and Enzyme.
 
