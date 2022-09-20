@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { getStory } from "../services/api";
-import { mapTime } from "../utilities/mapTime";
-import "../styles/story.css";
+import { getStory } from "../../services/api";
+import { mapTime } from "../../utilities/mapTime";
+import "./story.css";
 
 const Story = ({ storyId }) => {
   // setter and getter for the individual story

@@ -1,7 +1,7 @@
 import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import FilterStories from "../components/FilterStories";
-import { newStoriesUrl, topStoriesUrl } from "../services/api";
+import FilterStories from "../FilterStories";
+import { newStoriesUrl, topStoriesUrl } from "../../../services/api";
 
 Enzyme.configure({ adapter: new Adapter() });
 

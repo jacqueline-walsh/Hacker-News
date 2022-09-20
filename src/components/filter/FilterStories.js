@@ -1,4 +1,4 @@
-import "../styles/filterStories.css";
+import "./filterStories.css";
 
 const FilterStories = ({
   // Destructuring of props

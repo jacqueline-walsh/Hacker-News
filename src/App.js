@@ -1,4 +1,4 @@
-import StoriesContainer from "./components/StoriesContainer";
+import StoriesContainer from "./components/storyContainer/StoryContainer";
 
 const App = () => {
   // the only job of the app component is to load the Stories Container

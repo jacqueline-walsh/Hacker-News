@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getStoryIds, newStoriesUrl, topStoriesUrl } from "../services/api";
-import FilterStories from "./FilterStories";
-import Pagination from "./Pagination";
-import Story from "./Story";
-import "../styles/storyContainer.css";
+import { getStoryIds, newStoriesUrl, topStoriesUrl } from "../../services/api";
+import FilterStories from "../filter/FilterStories";
+import Pagination from "../pagination/Pagination";
+import Story from "../story/Story";
+import "./storyContainer.css";
 
-const StoriesContainer = () => {
+const StoryContainer = () => {
   // Pagination
   // getter and setter for the current page.  Default to be page 1
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,4 +58,4 @@ const StoriesContainer = () => {
   );
 };
 
-export default StoriesContainer;
+export default StoryContainer;

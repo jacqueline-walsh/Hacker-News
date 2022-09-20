@@ -1,4 +1,4 @@
-import "../styles/pagination.css";
+import "./pagination.css";
 
 const Pagination = ({
   totalStories,

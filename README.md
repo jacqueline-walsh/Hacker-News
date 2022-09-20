@@ -6,6 +6,41 @@
 
 This site has being created with minimal ux design. Basic css no frills styling libraries have been used. Flex box has provided the responsive effect with a simple media query for smaller devices.
 
+## API
+
+The hacker news returns a list of story ids for both 'new stories' and the 'top stories'.
+
+- New Stories "https://hacker-news.firebaseio.com/v0/newstories.json"
+- Tops Stories "https://hacker-news.firebaseio.com/v0/topstories.json"
+
+To return the data for the stories the above id's need to be passed to the fetch request.
+
+- Stories "https://hacker-news.firebaseio.com/v0/item/{storyId}.json?"
+
+## App Component
+
+This component is the top level component that implements the StoryComponent.
+
+## StoryContainer Component
+
+The storyContainer is the container that brings together the application. It is the parent to the children components being the filter, pagination and story components and will render the application as a whole.
+
+## Filter Component
+
+The filter component provides the user with a selector with options to chose which news feed to access. The options are for (default) New Stories or Top Stories.
+
+## Pagination Component
+
+The Pagination component provides the user with a simple navigation to stories pages. Each page has been set to show 30 stories. The api returns 500 stories which has been divided by 30 stories per page to provide 17 buttons for each page.
+
+## Story Component
+
+The Story component will return a single story with a link title taking the user to the news article. It also shows who the story is by and the length of time that the story has been posted.
+
+## Unit Testing
+
+Unit Testing has been carried out with Jest and Enzyme.
+
 ### Links to resources
 
 - [Original Live Site](https://news.ycombinator.com/)

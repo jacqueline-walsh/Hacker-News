@@ -1,11 +1,11 @@
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import axios from "axios";
-import { individualStory } from "../mocks";
-import { getStory } from "../services/api";
-import StoryContainer from "../components/StoriesContainer";
-import Filter from "../components/FilterStories";
-import Pagination from "../components/Pagination";
+import { individualStory } from "../../../mocks";
+import { getStory } from "../../../services/api";
+import StoryContainer from "../StoryContainer";
+import Filter from "../../filter/FilterStories";
+import Pagination from "../../pagination/Pagination";
 
 Enzyme.configure({ adapter: new Adapter() });
 
