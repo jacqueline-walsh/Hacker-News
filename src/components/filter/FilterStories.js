@@ -6,11 +6,14 @@ const FilterStories = ({
   topStoriesUrl,
   storyOption,
   setStoryOption,
+  setCurrentPage,
 }) => {
   // This is a controlled function that will
   // set the story option when option has been selected
   const handleSelectedOption = (e) => {
     setStoryOption(e.target.value);
+    // resets pagination page to 1
+    setCurrentPage(1);
   };
 
   return (

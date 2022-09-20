@@ -44,6 +44,7 @@ const StoryContainer = () => {
         topStoriesUrl={topStoriesUrl}
         storyOption={storyOption}
         setStoryOption={setStoryOption}
+        setCurrentPage={setCurrentPage}
       />
       <Pagination
         totalStories={storyIds.length}
