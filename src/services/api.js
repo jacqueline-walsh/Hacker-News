@@ -8,7 +8,7 @@ export const storyUrl = `${baseUrl}/item/`;
 //  axios queries api and returns stories by list of ids
 export const getStoryIds = async (storyType) => {
   try {
-    const results = await axios.get(storyType).then((data) => data);
+    const results = await axios.get(storyType);
     return results.data;
   } catch (error) {
     console.log("Error", error.message);
@@ -18,10 +18,7 @@ export const getStoryIds = async (storyType) => {
 // axios queries api with a specific story id passed as paramater
 export const getStory = async (storyId) => {
   try {
-    const results = await axios
-      .get(`${storyUrl}${storyId}.json`)
-      .then((data) => data)
-      .catch((error) => console.log(error));
+    const results = await axios.get(`${storyUrl}${storyId}.json`);
     return results.data;
   } catch (error) {
     console.log("Error", error.message);
